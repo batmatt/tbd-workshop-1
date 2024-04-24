@@ -16,6 +16,7 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 4. Select your project and set budget alerts on 5%, 25%, 50%, 80% of 50$ (in cloud console -> billing -> budget & alerts -> create buget; unclick discounts and promotions&others while creating budget).
 
   ![img.png](doc/figures/discounts.png)
+  ![img.png](doc/figures/zad3.webp)
   
 
 5. From avaialble Github Actions select and run destroy on main branch.
