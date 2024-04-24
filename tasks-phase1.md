@@ -40,6 +40,9 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 11. Reach YARN UI
    
    ***place the command you used for setting up the tunnel, the port and the screenshot of YARN UI here***
+   ```bash
+       gcloud compute ssh --zone "europe-west1-d" "tbd-cluster-m" --tunnel-through-iap --project "tbd-2024l-300524" -- -L 8088:localhost:1080
+   ```
    
 11. Draw an architecture diagram (e.g. in draw.io) that includes:
     1. VPC topology with service assignment to subnets
