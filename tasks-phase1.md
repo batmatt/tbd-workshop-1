@@ -4,15 +4,19 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 1. Authors:
 
-   ***enter your group nr***
-
+   Grupa nr 11:
+   - Mateusz Winnicki
+   - Bartłomiej Sweklej
+   - Magdalena Lutyńska
    ***link to forked repo***
+     [Link to repo](https://github.com/batmatt/tbd-workshop-1)
    
-2. Follow all steps in README.md.
+3. Follow all steps in README.md.
 
-3. Select your project and set budget alerts on 5%, 25%, 50%, 80% of 50$ (in cloud console -> billing -> budget & alerts -> create buget; unclick discounts and promotions&others while creating budget).
+4. Select your project and set budget alerts on 5%, 25%, 50%, 80% of 50$ (in cloud console -> billing -> budget & alerts -> create buget; unclick discounts and promotions&others while creating budget).
 
   ![img.png](doc/figures/discounts.png)
+  
 
 5. From avaialble Github Actions select and run destroy on main branch.
    
