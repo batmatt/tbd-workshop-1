@@ -31,9 +31,13 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 9. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
 
-    ***describe one selected module and put the output of terraform graph for this module here***
+    - bootstrap/main.tf:
+    ![img.png](doc/figures/bootstrap-graph.png)
+
+    - gcr/main.tf
+    ![img.png](doc/figures/gcr-graph.png)
    
-10. Reach YARN UI
+11. Reach YARN UI
    
    ***place the command you used for setting up the tunnel, the port and the screenshot of YARN UI here***
    
