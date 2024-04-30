@@ -233,3 +233,9 @@ resource_usage:
     [image.png](doc/figures/dataproc_web_interfaces.png)
     klikając na pożądany otworzymy okno przeglądarki z wybranym interfejsem.
     [image.png](doc/figures/spark_history_via_gcp.png)
+
+
+*Dodatkowe:*
+    Kilka razy podczas uruchamiania projektu czas wykonania Github Actions sięgła ok 50minut i informował o błędach związanych z utworzeniem klastra GKE. W logach znaleźliśmy takie błędy: [image.png](doc/figures/cpu_quota_error.png)
+    świadczące o ograniczeniu CPU. Wystąpiliśmy o rozszerzenie tych zasobów w celu uruchomienia projektu, lecz zostało nam odmówione.
+    [image.png](doc/figures/cpu_quota_email.png)
