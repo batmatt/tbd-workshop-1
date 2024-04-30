@@ -191,7 +191,8 @@ resource_usage:
    
 15. Find and correct the error in spark-job.py
 
-    ***describe the cause and how to find the error***
+    [Fix in spark-job.py](https://github.com/batmatt/tbd-workshop-1/commit/2da8c77792abcae6a16bc94e07abc59a2e45db67)
+    W `spark-job.py` ścieżka do wyjściowego 'kubełka' była pozostawiona na wartości domyślnej, wystarczyło ją jedynie na ścieżkę do właściwego kubełka w projekcie.  
 
 16. Additional tasks using Terraform:
 
