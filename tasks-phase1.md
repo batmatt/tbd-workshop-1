@@ -161,13 +161,21 @@ resource_usage:
     ***place the code and output here***
     ```
     CREATE SCHEMA IF NOT EXISTS demo OPTIONS(location = 'europe-west1');
-    CREATE OR REPLACE EXTERNAL TABLE `tbd-2024l-300524.demo.shakespeare` OPTIONS ( format = 'ORC', uris = ['gs://tbd-2024l-300524-data/*.orc']);
-    SELECT * FROM demo.shakespeare ORDER BY int1 DESC LIMIT 10;
+
+    CREATE OR REPLACE EXTERNAL TABLE demo.shakespeare
+      OPTIONS (
+      
+      format = 'ORC',
+      uris = ['gs://tbd-2024l-300524-data/data/shakespeare/*.orc']);
+
+
+    SELECT * FROM demo.shakespeare ORDER BY sum_word_count DESC LIMIT 5;
     ```
-     ![img.png](doc/figures/query.webp)
+     ![img.png](doc/figures/big_query_table_creation.png)
    
     ***why does ORC not require a table schema?***
-
+    
+    Format ORC przechowuje schemat danych w samym pliku. Oznacza to, że każdy plik ORC zawiera metadane opisujące nazwy kolumn, typy danych i strukturę przechowywanych w nim danych. W rezultacie podczas odczytu danych schemat można pobrać bezpośrednio z pliku, eliminując potrzebę określania tych parametrów 'up-front' przy zapytaniu.
     
    
 
