@@ -151,10 +151,10 @@ resource_usage:
 
    ***place the screenshot from infracost output here***
    Wynik estymacji Infracosta na PR dodającym Infracost (brak zmian w infrastrukturze)
-   ![obraz](https://github.com/batmatt/tbd-workshop-1/assets/62250240/80dc5507-e19d-4825-98db-7668da4c5389)
+   ![image.png](doc/figures/infracost_pr.png)
 
    Wynik estymacji Infracosta na PR dodającym przykładowy plik testowy wprowadzjący zmiany w infrastrukturze: https://github.com/infracost/example-terraform/blob/master/google/main.tf
-  ![obraz](https://github.com/batmatt/tbd-workshop-1/assets/62250240/00ba7b9a-8b1e-4b1d-aba4-0de936e3f094)
+  ![image.png](doc/figures/infracost_pr_change_outcome.png)
    
 11. Create a BigQuery dataset and an external table using SQL
     
