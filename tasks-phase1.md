@@ -212,4 +212,24 @@ resource_usage:
 
     4. (Optional) Get access to Apache Spark WebUI
 
-    [Access to Apache Spark WebUI](https://github.com/batmatt/tbd-workshop-1/commit/954d9f6f9d7fae5c04b9263f441de9bf1d6c937b)
+    [Enable access to Apache Spark WebUI](https://github.com/batmatt/tbd-workshop-1/commit/954d9f6f9d7fae5c04b9263f441de9bf1d6c937b)
+
+    `enable_http_port_access` - Flaga ustawiona na true umożliwia dostęp do portów w klastrze z zewnątrz (Component Gateway)
+    Do Spark UI można się dostać poprzez zestawienie tunelu jak poprzednio dla klastra Dataproc aby się dostać do YARN UI
+    ```
+        gcloud compute ssh tbd-cluster-m \
+      --project=tbd-2024l-300524 \
+      --zone=europe-west1-d -- -D 1080 -N
+    ``` 
+    A lokalną przeglądarkę otworzyć na adresie `localhost:18080`
+    ```
+    /usr/bin/google-chrome \
+    --proxy-server="socks5://localhost:1080" \
+    --user-data-dir="/tmp/tbd-cluster-m" http://tbd-cluster-m:18080
+    ```
+    [image.png](doc/figures/spark_histroy_server.png)
+
+    Lub przez panel Dataproc w Konsoli GCP. Po wejściu w szczegóły klastra i wybraniu zakładki *WEB INTERFACES*, 
+    [image.png](doc/figures/dataproc_web_interfaces.png)
+    klikając na pożądany otworzymy okno przeglądarki z wybranym interfejsem.
+    [image.png](doc/figures/spark_history_via_gcp.png)
