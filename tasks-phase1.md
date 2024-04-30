@@ -189,16 +189,18 @@ resource_usage:
 
     1. Add support for arbitrary machine types and worker nodes for a Dataproc cluster and JupyterLab instance
 
-    ***place the link to the modified file and inserted terraform code***
-    
-    3. Add support for preemptible/spot instances in a Dataproc cluster
+    [New machine types for Dataproc](https://github.com/batmatt/tbd-workshop-1/commit/db8f5a1ff30b6d642fe255de3220fd0747128e55)
 
-    ***place the link to the modified file and inserted terraform code***
+    [Vertex AI machine type](https://github.com/batmatt/tbd-workshop-1/commit/87406a265b911fd7ce56972abb642a4fba080d44)
+    
+    2. Add support for preemptible/spot instances in a Dataproc cluster
+
+    [Added preemptible instances in Dataproc](https://github.com/batmatt/tbd-workshop-1/commit/b8c72140665e08efd029a64293b522002a003b2a) 
     
     3. Perform additional hardening of Jupyterlab environment, i.e. disable sudo access and enable secure boot
     
-    ***place the link to the modified file and inserted terraform code***
+    [No-sudo and secure boot for Jupyterlab](https://github.com/batmatt/tbd-workshop-1/commit/0dfa9ff85c45f97526bce730238c10a193c2c84e)
 
     4. (Optional) Get access to Apache Spark WebUI
 
-    ***place the link to the modified file and inserted terraform code***
+    [Access to Apache Spark WebUI](https://github.com/batmatt/tbd-workshop-1/commit/954d9f6f9d7fae5c04b9263f441de9bf1d6c937b)
