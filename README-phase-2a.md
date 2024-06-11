@@ -18,20 +18,26 @@ Worth to read:
 
 2. Authors:
 
-   ***Enter your group nr***
 
-   ***Link to forked repo***
+   Zespół 11
+   - Mateusz Winnicki
+   - Bartosz Sweklej
+   - Magdalena Lutyńska
 
-3. Sync your repo with https://github.com/bdg-tbd/tbd-workshop-1.
+   [link to forked repo](https://github.com/batmatt/tbd-workshop-1)
+   
+4. Sync your repo with https://github.com/bdg-tbd/tbd-workshop-1.
 
-4. Provision your infrastructure.
+   ![obraz](https://github.com/batmatt/tbd-workshop-1/assets/62250240/f5e2895c-8625-4bfa-ad38-2bfd6bc63460)
+
+6. Provision your infrastructure.
 
     a) setup Vertex AI Workbench `pyspark` kernel as described in point [8](https://github.com/bdg-tbd/tbd-workshop-1/tree/v1.0.32#project-setup) 
 
     b) upload [tpc-di-setup.ipynb](https://github.com/bdg-tbd/tbd-workshop-1/blob/v1.0.36/notebooks/tpc-di-setup.ipynb) to 
 the running instance of your Vertex AI Workbench
 
-5. In `tpc-di-setup.ipynb` modify cell under section ***Clone tbd-tpc-di repo***:
+7. In `tpc-di-setup.ipynb` modify cell under section ***Clone tbd-tpc-di repo***:
 
    a)first, fork https://github.com/mwiewior/tbd-tpc-di.git to your github organization.
 
@@ -49,7 +55,7 @@ the running instance of your Vertex AI Workbench
  
 
 
-6. Access Vertex AI Workbench and run cell by cell notebook `tpc-di-setup.ipynb`.
+8. Access Vertex AI Workbench and run cell by cell notebook `tpc-di-setup.ipynb`.
 
     a) in the first cell of the notebook replace: `%env DATA_BUCKET=tbd-2023z-9910-data` with your data bucket.
 
