@@ -13,7 +13,7 @@ locals {
   dbt_version             = "1.7.13"
   dbt_spark_version       = "1.7.1"
   dbt_git_repo            = "https://github.com/batmatt/tbd-tpc-di.git"
-  dbt_git_repo_branch     = "notebook-setup"
+  dbt_git_repo_branch     = "main"
 }
 
 module "vpc" {
