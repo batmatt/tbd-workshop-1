@@ -83,11 +83,19 @@ the running instance of your Vertex AI Workbench
 
 7. Explore files created by generator and describe them, including format, content, total size.
 
-   ***Files desccription***
+   ![img.png](doc/figures/generated_data_1.png)
+   ![img.png](doc/figures/generated_data_2.png)
+
 
 8. Analyze tpcdi.py. What happened in the loading stage?
 
-   ***Your answer***
+   Skrypt automatyzuje ładowanie danych finansowych TPC-DI do hurtowni. Identyfikuje pliki, przenosi je do obszaru tymczasowego w Google Cloud Storage, tworzy DataFrame'y PySpark i wykonuje podstawowe przekształcenia.
+
+   1. Definicja schematu: Każdy typ pliku ma zdefiniowany schemat za pomocą StructType i StructField dla strukturyzowanego ładowania danych.
+   2. Przesyłanie plików: Pliki są przesyłane do GCS za pomocą klienta Google Cloud Storage, zapewniając ich dostępność dla Sparka.
+   3. Tworzenie DataFrame: Przesłane pliki są wczytywane do DataFrames Sparka z odpowiednimi opcjami ustawionymi dla delimitera i schematu.
+   4. Przetwarzanie DataFrame: Specyficzne transformacje i selekcje są wykonywane na DataFrames w celu wyodrębnienia i sformatowania wymaganych danych.
+   5. Tworzenie tabel: Przetworzone DataFrames są pokazywane (jeśli show jest prawdziwe) lub zapisywane jako tabele Hive za pomocą funkcji save_df.
 
 9. Using SparkSQL answer: how many table were created in each layer?
 
