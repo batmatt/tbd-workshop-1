@@ -99,7 +99,7 @@ the running instance of your Vertex AI Workbench
 
 9. Using SparkSQL answer: how many table were created in each layer?
 
-   ***SparkSQL command and output***
+   ![img.png](doc/figures/table_in_layer_counter.png)
 
 10. Add some 3 more [dbt tests](https://docs.getdbt.com/docs/build/tests) and explain what you are testing. ***Add new tests to your repository.***
 
