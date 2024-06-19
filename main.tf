@@ -12,8 +12,8 @@ locals {
   spark_blockmgr_port     = 30001
   dbt_version             = "1.7.13"
   dbt_spark_version       = "1.7.1"
-  dbt_git_repo            = "https://github.com/mwiewior/tbd-tpc-di.git"
-  dbt_git_repo_branch     = "main"
+  dbt_git_repo            = "https://github.com/batmatt/tbd-tpc-di.git"
+  dbt_git_repo_branch     = "notebook-setup"
 }
 
 module "vpc" {
@@ -60,11 +60,11 @@ module "vertex_ai_workbench" {
 
 #
 module "dataproc" {
-  depends_on   = [module.vpc]
-  source       = "./modules/dataproc"
-  project_name = var.project_name
-  region       = var.region
-  subnet       = module.vpc.subnets[local.notebook_subnet_id].id
+  depends_on          = [module.vpc]
+  source              = "./modules/dataproc"
+  project_name        = var.project_name
+  region              = var.region
+  subnet              = module.vpc.subnets[local.notebook_subnet_id].id
   master_machine_type = "e2-standard-2"
   worker_machine_type = "e2-standard-2"
 }
