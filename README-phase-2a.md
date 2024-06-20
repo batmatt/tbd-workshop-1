@@ -112,6 +112,8 @@ the running instance of your Vertex AI Workbench
    ```
    so dbt_git_repo points to your fork of tbd-tpc-di. 
 
+   [commit with repo change](https://github.com/batmatt/tbd-workshop-1/commit/325f0d6d2eaea88129373497326b42c41b52f4c5) 
+   [commit with branch change](https://github.com/batmatt/tbd-workshop-1/commit/282e2feb4c85f2359e070f72d052999f185d72da)
+
 12. Redeploy infrastructure and check if the DAG finished with no errors:
 
-***The screenshot of Apache Aiflow UI***
