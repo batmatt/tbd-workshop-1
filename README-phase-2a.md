@@ -83,9 +83,25 @@ the running instance of your Vertex AI Workbench
 
 7. Explore files created by generator and describe them, including format, content, total size.
 
+   Aby prześledzić co zawierają wygenerowane dane zdecydowanie łatwiej jest zacząć od przeanalizowania [plików konfiguracyjnych generatora](https://github.com/batmatt/tbd-tpc-di/tree/main/tools/pdgf/config). 
+   Plik `tpc-di-schema.xml` definiuje strukturę danych, która ma być generowana. Określa różne tabelki danych, ich pola oraz typy danych, które mają być w nich zawarte. Określa także zależności między różnymi tabelami oraz relacje, jakie mają zachodzić pomiędzy danymi oraz definiuje szczegółowe wartości pól, takich jak formaty numerów, łańcuchy znaków czy wartości logiczne.
+   Wygenerowane pliki zostały podzielone na 3 foldery: Batch1, Batch2, Batch3. W każdym z nich znajdują się pliki .csv, z danymi np. `TradeType_audit.csv` o typach transakcji, `TaxRate_audit.csv` o stawkach podatkowych, `Account_audit.csv` o kontach. Następnie przy użyciu [skryptu](https://github.com/batmatt/tbd-tpc-di/blob/main/tpcdi.py) zawartość plików jest odczytywana i konwertowana na format kompatybilny z Hive tworząc w kubełku GCS Data Lakehouse. 
+
    ![img.png](doc/figures/generated_data_1.png)
    ![img.png](doc/figures/generated_data_2.png)
 
+   Największe rozmiarowo są pliki `DailyMarket.txt` (3GB) zawiera dane o cenach akcji na przestrzeni czasu, `Trade.txt` (1.2GB), `TradeHistory.txt` (1GB) `CashTransactions.txt` (1GB) oraz `WatchHistory.txt` (1.3GB), zawierają one dane o transakcjach, których jak można się spodziewać podczas operowania rynku jest znacznie więcej niż innych, dotyczących np. typów transakcji, stawek podatkowych czy kont biorących udział w transakcjach. 
+
+   W skrócie opis zawartości plików:
+   - TaxRate.txt - id, nazwa i wartość stawki podatkowej
+   - HR.csv - dane pracownika oraz id managera
+   - WatchHistory.txt - dane o obserwowanych transakcjach przez klienta
+   - Trade.txt - id, status, stempel czasowy, czy gotówkowa, ilość zakupionych akcji, wylicytowana cena i cena transakcji, stawka opodatkowania, id konta klienta
+   - TradeHistory.txt - id transakcji, stempel czasowy, status transakcji
+   - StatusType.txt - zbiór statusów transakcji
+   - TradeType.txt - zbiór typów transakcji
+   - HoldingHistory.txt - id, id transakcji po której nastąpiła zmiana holdingu, ilość akcji przed i po
+   - CashTransactions.txt - id konta klienta, stempel czasowy, suma, nazwa
 
 8. Analyze tpcdi.py. What happened in the loading stage?
 
